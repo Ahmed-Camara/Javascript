@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+:root{
+    --success-color:#2ecc71;
+    --error-color: #e74c3c;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+  font-family: Arial,Helvetica,sans-serif;
+  font-size:17px;
+  line-height:1.6;
+}
+
+.button{
+  background-color:coral;
+  padding:1em 2em;
+  color:white;
+}
+
+.button:hover{
+  background-color:#333;
+}
+
+.modal{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  overflow: auto;
+  background-color:rgba(0,0,0,0.5);
+}
+
+.modal-content{
+  background-color:#f4f4f4;
+  margin:10% auto;
+  padding:20px;
+  width:30%;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0,.2), 0 7px 20px 0 rgba(0,0,0,.17);
+  animation-name:modalOpen;
+  animation-duration:2s;
+}
+
+.close-btn{
+  color:#ccc;
+  float:right;
+  font-size: 30px;
+}
+
+
+.close-btn:hover,.close-btn:focus{
+  color:#000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes modalOpen{
+  from{
+    opacity:0;
+  }
+  to {opacity:1;}
+}
+
+/*
+.container{
+    background-color: #fff;
+    border-radius: 5px;
+    width: 400px;
+
+}*/
+h2{
+    text-align: center;
+    margin: 0 0 20px;
+}
+.form{
+
+    padding: 30px 40px;
+
+}
+.form-control{
+
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.form-control label{
+
+   color: #777;
+   display: block;
+   margin-bottom: 5px;
+}
+.form-control input{
+    border: 2px solid  #f0f0f0;
+    border-radius: 4px;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+
+}
+.form-control input:focus{
+    outline: 0;
+    border-color: #777;
+}
+.form-control.success input{
+
+    border-color:var(--success-color);
+
+}
+.form-control.error input{
+    border-color:var(--error-color);
+}
+
+.form-control small{
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.error small{
+
+    visibility: visible;
+}
+
+.form button{
+    cursor: pointer;
+    background-color: #3498db;
+    border: 2px sold #3498db;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
